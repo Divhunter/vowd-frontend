@@ -1,0 +1,117 @@
+/**********************************************************************************************/
+/******************************************* letsTalk *****************************************/
+/**********************************************************************************************/
+
+.letsTalk__icon {
+    margin-bottom: -6.6vw;
+    font-size: 10vw;
+    color: rgb(112, 190, 247);
+}
+
+.letsTalk__picture {
+    position: relative;
+    left: -100vw;
+    width: 250vw;
+    height: auto;
+    margin-bottom: -2vw;
+}
+
+.letsTalk__discount {
+    position: absolute;
+    display: inline-block;
+    top: 361vw;
+    left: 0;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 5vw;
+    font-family: 'Helvetica';
+    font-weight: bolder;
+    background-color: rgb(0, 196, 179);
+    color: white;
+    z-index: 200;
+}
+
+.letsTalk__labels {
+    position: absolute;
+    top: 384vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: row;
+    width: 84.5vw;
+    font-family: Open, sans-serif;
+    font-size: 6vw;
+    font-weight: 700;
+    letter-spacing: .1vw;
+    color:rgb(1, 69, 99);
+}
+
+.letsTalk__labels__projet {
+    margin-left: 5.6vw;
+}
+
+.letsTalk__labels__budget {
+    margin-left: 8.5vw;
+}
+
+.letsTalk__labels__delai {
+    margin-left: 10vw;
+}
+
+/********************************************* media queries ************************************************/
+/************************** New rules if the screen is at more 649px ****************************************/
+
+@media screen and (min-width: 650px) {
+
+    /**********************************************************************************************/
+    /******************************************* letsTalk *****************************************/
+    /**********************************************************************************************/
+
+    .letsTalk__icon {
+        margin-bottom: -23px;
+        font-size: 42px;
+    }
+
+    .letsTalk__picture {
+        left: -40vw;
+        width: 170vw;
+        margin-bottom: -4px;
+    }
+
+    .letsTalk__discount {
+        top: 80px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 18px;
+        padding-right: 18px;
+        margin-top: 1200px;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .letsTalk__labels {
+        top: 1400px;
+        margin-left: 38px;
+        width: 550px;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .letsTalk__labels__projet {
+        left: 0;
+        margin-left: 30px;
+    }
+    
+    .letsTalk__labels__budget {
+        left: 0;
+        margin-left: 56px;
+    }
+    
+    .letsTalk__labels__delai {
+        left: 0;
+        margin-left: 58px;
+    }
+}

@@ -1,0 +1,255 @@
+/**********************************************************************************************/
+/********************************************** app *******************************************/
+/**********************************************************************************************/
+
+header,
+footer, 
+section, 
+article {
+    overflow: hidden;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+ul, li {
+    list-style:none;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+input, textarea{
+    border: 0;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+textarea {
+    border: 0;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+
+/********************************************** Forms ********************************************/
+
+.formMeanStyle input {
+    position: relative;
+    border-radius: 1vw;
+    width: 80vw;
+    height: 14vw;
+    margin-bottom: 3vw;
+    padding-left: 2vw;
+    font-family: Open, sans-serif;
+	font-size: 5vw;
+    font-weight: 300;
+    letter-spacing: .1vw;
+    opacity: 1;
+}
+
+.formSubmit {
+    position: relative;
+    top: 1vh;
+    height: auto;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    margin-bottom: 3vw;
+    width: 80vw;
+	border: 0;
+	border-radius: 1.2vw;
+    font-family: Open, sans-serif;
+ 	font-size: 6vw;
+    font-weight: 500;
+    letter-spacing: .1vw;
+	background-color: rgb(255, 145, 0);
+    box-shadow: rgba(255, 58, 58, 0.5) 0px 30px 60px -12px inset, 
+    rgba(255, 72, 0, 0.719) 0px 18px 36px -18px inset;
+	color: white;
+	cursor: pointer;
+	transition: background-color .2s;
+}
+
+.formSubmit:hover {
+	transition: background-color .2s;
+	background-color: rgb(255, 177, 31);
+}
+
+.formSubmit:active {
+	background-color: rgb(255, 208, 0);
+}
+
+.forgotPassword,
+.backToWebSiteModal {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 1Vh;
+    height: auto;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    margin-bottom: 3vw;
+    width: 80vw;
+	border: 0;
+	border-radius: 1.2vw;
+    font-family: Open, sans-serif;
+ 	font-size: 4vw;
+    font-weight: 500;
+    color: rgb(34, 52, 66);
+    background-color: rgba(186, 205, 221, .7);
+    transition: background-color .3s, color .3s;
+    cursor: pointer;
+}
+
+.forgotPassword:hover,
+.backToWebSiteModal:hover {
+    color: white;
+    background-color: rgb(49, 75, 95);
+    transition: background-color .3s, color .3s;
+}
+
+.forgotPassword:active,
+.backToWebSiteModal:active {
+    color: rgb(34, 52, 66);
+    background-color: rgba(186, 205, 221, .7);
+}
+
+.formModal {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 1vh;
+    height: auto;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    margin-bottom: 3vw;
+    width: 80vw;
+	border: 0;
+	border-radius: 1.2vw;
+    font-family: Open, sans-serif;
+ 	font-size: 6vw;
+    font-weight: 500;
+    letter-spacing: .1vw;
+    color: white;
+    background-color: rgb(2, 143, 235);
+    box-shadow: rgba(78, 58, 255, 0.301) 0px 30px 60px -12px inset, 
+    rgba(0, 17, 255, 0.719) 0px 18px 36px -18px inset;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.formModal:hover {
+    background-color: rgb(49, 170, 250);
+    transition: .2s;
+}
+
+.formModal:active {
+	background-color: rgb(141, 198, 236);
+}
+
+/*************************************************************************************************/
+.form-submit {
+	position: absolute;
+	height: auto;
+    padding: 5vw;
+	border: 0;
+	border-radius: 1.2vw;
+    font-family: Open, sans-serif;
+ 	font-size: 6vw;
+    font-weight: 500;
+    letter-spacing: .1vw;
+	background-color: rgb(255, 145, 0);
+    box-shadow: rgba(255, 58, 58, 0.5) 0px 30px 60px -12px inset, 
+    rgba(255, 72, 0, 0.719) 0px 18px 36px -18px inset;
+	color: white;
+	cursor: pointer;
+	transition: background-color .5s;
+}
+
+.form-submit:hover {
+	transition: background-color .5s;
+	background-color: rgb(255, 166, 0);
+}
+
+.form-submit:active {
+	background-color: rgb(255, 208, 0);
+}
+
+.form__next,
+.form__previous,
+.go-to-subscrit-submit,
+.subscrit-return-submit {
+    text-align: center;
+    padding: 5vw;
+    margin-bottom: 3vw;
+    border-radius: 1vw;
+    width: 80vw;
+    font-family: Open, sans-serif;
+ 	font-size: 6vw;
+    font-weight: 500;
+    letter-spacing: .1vw;
+    color: white;
+    background-color: rgb(2, 143, 235);
+    box-shadow: rgba(78, 58, 255, 0.301) 0px 30px 60px -12px inset, 
+    rgba(0, 17, 255, 0.719) 0px 18px 36px -18px inset;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.form__next:hover,
+.form__previous:hover,
+.go-to-subscrit-submit:hover,
+.subscrit-return-submit:hover {
+    background-color: rgb(39, 153, 230);
+    transition: .2s;
+}
+
+.arrow-down {
+    width: 10vw;
+    height: auto;
+    opacity: .6;
+} 
+
+/********************************************* media queries ************************************************/
+/************************** New rules if the screen is at more 649px ****************************************/
+@media screen and (min-width: 650px) {
+
+    /**********************************************************************************************/
+    /********************************************** app *******************************************/
+    /**********************************************************************************************/
+
+    .form-submit {
+        padding: 20px;
+        border-radius: 6px;
+        font-size: 28px;
+        letter-spacing: .5px;
+    }
+
+    .form__next,
+    .form__previous,
+    .subscrit-form {
+        margin-bottom: 12px;
+        width: 500px;
+        padding: 20px;
+        border-radius: 6px;
+        font-size: 28px;
+        letter-spacing: .5px;
+    }
+
+    .arrow-down {
+        width: 40px;
+    } 
+}

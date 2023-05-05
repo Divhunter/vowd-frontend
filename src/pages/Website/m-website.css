@@ -1,0 +1,112 @@
+/**********************************************************************************************/
+/******************************************** website *****************************************/
+/**********************************************************************************************/
+
+.website {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-bottom: 300vw;
+    padding-top: 5vw;
+    background-color: rgb(17, 29, 39);
+    color: rgb(231, 244, 253);
+    top: 0;
+    z-index: 2000;
+}
+
+.website__logo-vowd {
+    position: relative;
+    margin-bottom: 2vw;
+	top: 4.5vw;
+    width: 12vw;
+	height: auto;
+}
+
+.website_text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4.2vw;
+    font-weight: 400;
+    line-height: 5.8vw;
+    color: rgb(192, 192, 192);
+}
+
+.website_text_span {
+    font-size: 4.5vw;
+    font-family: 'Michroma', sans-serif;
+    letter-spacing: .5vw;
+    text-transform: uppercase;
+    color: rgb(231, 244, 253);
+}
+
+#modal-Title-log,
+#modal-Title-reg,
+#modal-Title-send,
+#modal-Title-updatePassword {
+    font-weight: 300;
+    text-align: left;
+    margin-left: 10vw;
+    font-size: 6vw;
+    letter-spacing: .2vw;
+}
+
+.toogle-icon {
+    position: absolute;
+    right: 0;
+    margin-right: 13vw;
+    font-size: 5.5vw;
+    z-index: 1000;
+    color: rgb(190, 192, 196);
+    cursor: pointer;
+}
+
+.connexion-password-toogle-icon,
+.register-conf-password-toogle-icon,
+.newPass-conf-password-toogle-icon {
+    margin-top: -10vw;
+}
+
+.register-password-toogle-icon,
+.newPass-password-toogle-icon {
+    margin-top: -27vw;
+}
+
+.website__button__btn {
+    position: relative;
+    margin-top: -2vw;
+    margin-bottom: 5vw;
+    text-align: center;
+    font-size: 9vw;
+    color: rgb(189, 223, 248);
+    transition: color .4s;
+}
+
+.website__button__btn:hover {
+    color: white;
+    transition: color .4s;
+}
+
+.website__button__btn:active {
+    color: rgb(189, 223, 248);
+}
+
+/********************************************* media queries ************************************************/
+/************************** New rules if the screen is at more 649px ****************************************/
+
+@media screen and (min-width: 650px) {
+
+    /**********************************************************************************************/
+    /******************************************* website ******************************************/
+    /**********************************************************************************************/
+
+    .website__logo-vowd {
+        margin-bottom: 20px;
+        top: 25px;
+        width: 90px;
+    }
+    
+    .website__button__btn {
+        margin-top: -2px;
+        font-size: 55px;
+    }
+}

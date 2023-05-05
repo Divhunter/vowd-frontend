@@ -1,0 +1,24 @@
+/**********************************************************************************************/
+/********************************************* info *******************************************/
+/**********************************************************************************************/
+
+.info {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-bottom: 300vw;
+    padding-top: 5vw;
+    background-color: rgb(17, 29, 39);
+    color: rgb(231, 244, 253);
+    top: 0;
+    z-index: 2000;
+}
+
+.info-text {
+    font-weight: 300;
+    text-align: left;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 4.2vw;
+    letter-spacing: .1vw;
+}

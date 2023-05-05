@@ -1,0 +1,102 @@
+/**********************************************************************************************/
+/***************************************** contact-form ***************************************/
+/**********************************************************************************************/
+
+.form {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+    top: 180vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+.form__page2 {
+    display: none;
+}
+
+.form-group > input,
+.form-group > textarea {
+    border-radius: 1vw;
+    width: 80vw;
+    margin-bottom: 3vw;
+    padding-left: 2vw;
+    font-family: Open, sans-serif;
+	font-size: 5vw;
+    font-weight: 300;
+    letter-spacing: .1vw;
+    opacity: 1;
+    background-color: rgba(0, 62, 88, 0.4);
+    transition: background-color .2s;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    background-color: rgba(0, 62, 88, 0.2);
+    transition: background-color .2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: white;
+    opacity: .7;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: rgb(90, 90, 90);
+}
+
+.form-group input:focus,
+.form-group input:focus[type=password],
+.form-group textarea:focus {
+    background: white;
+    color: black;
+}
+
+.form-group input {
+    height: 14vw;
+}
+
+.form-group label {
+    display: none;
+}
+
+.contact-submit {
+    width: 80vw;
+}
+
+/********************************************* media queries ************************************************/
+/************************** New rules if the screen is at more 649px ****************************************/
+
+@media screen and (min-width: 650px) {
+
+    /**********************************************************************************************/
+    /***************************************** contact-form ***************************************/
+    /**********************************************************************************************/
+
+    .form {
+        top: 55%;
+    }
+    
+    .form-group > input,
+    .form-group > textarea {
+        border-radius: 6px;
+        width: 500px;
+        margin-bottom: 12px;
+        padding-left: 20px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 1px;
+    }
+    
+    .form-group input {
+        height: 60px;
+    }
+    
+    .contact-submit {
+        width: 500px;
+    }
+}
