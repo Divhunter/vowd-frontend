@@ -88,7 +88,7 @@ const NewPass = () => {
                 } else {
                     console.log(res.data.messageUpdate)
                     alert(res.data.messageUpdate)
-                    navigate('/vowd')
+                    navigate('/')
                 }
             })
             .catch((error) => {

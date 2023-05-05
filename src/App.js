@@ -22,10 +22,10 @@ const App = () => {
         <Auth.Provider value={{ isAuthenticated, setIsAuthenticated }}>
             <div>
                 <Routes>
-                    <Route exact path='/vowd/home/:userId' element={ <Wrapper /> } />
-                    <Route exact path='/vowd' element={ <Website /> } />
-                    <Route exact path='/vowd/info' element={ <Info /> } />
-                    <Route exact path='/vowd/update_password' element={ <NewPass /> } />
+                    <Route exact path='/home/:userId' element={ <Wrapper /> } />
+                    <Route exact path='/' element={ <Website /> } />
+                    <Route exact path='/info' element={ <Info /> } />
+                    <Route exact path='/update_password' element={ <NewPass /> } />
                     <Route exact path='/*' element={ <Error /> } />
                 </Routes>
                 <AuthenticatedRoute />

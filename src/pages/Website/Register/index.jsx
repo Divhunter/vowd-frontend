@@ -100,7 +100,7 @@ const Register = () => {
 					const response = login(values)
             		setIsAuthenticated(response)
 					const userId = res.data.userId
-					navigate(`/vowd/home/${userId}`)
+					navigate(`/home/${userId}`)
 					
 				}
 			})

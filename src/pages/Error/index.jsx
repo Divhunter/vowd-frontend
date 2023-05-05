@@ -15,7 +15,7 @@ const Error = () => {
             <h1 className='error__statut'>404</h1>
             <img className='error__failled' src={failled} alt='logo-vowd-falled'/>
             <h2 className='error__subheader'>Oups! Une erreur est survenue!</h2>
-            <Link className="error__link" to="/vowd">
+            <Link className="error__link" to="/">
                 <p>
                     Retour au site
                 </p>

@@ -77,7 +77,7 @@ const SendMail = () => {
 			} else {
 				console.log(res.data.messageSend)
                 alert(res.data.messageSend)
-                navigate('/vowd/info')
+                navigate('/info')
 			}
 		})
 		.catch((error) => {
