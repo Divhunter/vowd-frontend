@@ -63,7 +63,7 @@ const SendMail = () => {
 
 		await axios({
 			method: 'post',
-			url: 'http://localhost:4200/api/auth/sendMail',
+			url: 'https://vowd-project-app-api.onrender.com/api/auth/sendMail',
 			credentials: true,
 			data: {
 				userName: values.userName,

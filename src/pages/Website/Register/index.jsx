@@ -73,7 +73,7 @@ const Register = () => {
 		else {
 			await axios({
 				method: 'post',
-				url: 'http://localhost:4200/api/auth/register',
+				url: 'https://vowd-project-app-api.onrender.com/api/auth/register',
 				credentials: true,
 				data: {
 					userName: values.userName,

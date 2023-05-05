@@ -76,7 +76,7 @@ const Login = () => {
 
 		await axios({
 			method: 'post',
-			url: 'http://localhost:4200/api/auth/login',
+			url: 'https://vowd-project-app-api.onrender.com/api/auth/login',
 			credentials: true,
 			data: {
 				userName: values.userName,
@@ -93,7 +93,7 @@ const Login = () => {
 				alert(res.data.passwordLogError)
 			} else {
 				const userId = res.data.userId
-				navigate(`/home/${userId}`)
+				navigate(`/vowd/home/${userId}`)
 			}
 		})
 		.catch((error) => {
