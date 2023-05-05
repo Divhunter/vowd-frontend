@@ -11,7 +11,7 @@ export function hasAuthenticated() {
 }
 
 export function login(credentials) {
-    axios.post('http://localhost:4200/vowd/api/auth/login', credentials)
+    axios.post('http://localhost:4200/api/auth/login', credentials)
     .then(res => JSON.stringify(res.data.token))
     .then(token => {
         addItem('token', token)
