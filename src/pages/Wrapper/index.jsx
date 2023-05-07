@@ -21,7 +21,7 @@ const Wrapper = (props) => {
 	const {isAuthenticated} = useContext(Auth)
 
 	useEffect(() => {
-		if(isAuthenticated === false) {
+		if(isAuthenticated === false || props.userId === "undefined") {
 			navigate('/*')
 		} 
 	}, [isAuthenticated, navigate, props.userId])
