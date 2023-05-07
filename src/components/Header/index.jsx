@@ -55,7 +55,7 @@ const Header = () => {
 					'navbar__button-x closed'} 
 				icon={faXmark} 
 			/>
-			<Logout className='navbar__logout' to='/vowd'>
+			<Logout className='navbar__logout' to='/'>
 				<FontAwesomeIcon 
 					onClick={handleLogout}
 					className='navbar__logout__btn' 
