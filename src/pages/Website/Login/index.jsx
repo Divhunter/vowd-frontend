@@ -93,7 +93,7 @@ const Login = () => {
 				alert(res.data.passwordLogError)
 			} else {
 				const userId = res.data.userId
-				navigate(`/vowd/home/${userId}`)
+				navigate(`/home/${userId}`)
 			}
 		})
 		.catch((error) => {
