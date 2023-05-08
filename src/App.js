@@ -26,7 +26,7 @@ const App = () => {
                     <Route exact path='/' element={ <Website /> } />
                     <Route exact path='/info' element={ <Info /> } />
                     <Route exact path='/*' element={ <Error /> } />
-                    <Route exact path='/updatePassword' element={ <NewPass /> } />
+                    <Route exact path='/password' element={ <NewPass /> } />
                 </Routes>
                 <AuthenticatedRoute />
             </div>
