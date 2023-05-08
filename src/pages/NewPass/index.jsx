@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { useState } from 'react'
-import { removeItem } from '../../servicesApi/LocalStorage'
+//import { removeItem } from '../../servicesApi/LocalStorage'
 import axios from "axios"
 import FormInput from '../../functions/FormInput'
 import { Link } from 'react-router-dom'
@@ -13,7 +13,7 @@ const NewPass = () => {
 
     const navigate = useNavigate()
 
-	removeItem('token')
+	//removeItem('token')
 
 	const [ visible, setVisibility ] = useState(false)
 
