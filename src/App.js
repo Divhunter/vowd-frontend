@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Routes, Route, IndexRoute } from 'react-router-dom'
+import {Routes, Route } from 'react-router-dom'
 import { hasAuthenticated } from './servicesApi/AuthApi'
 import Auth from './contexts/Auth'
 import AuthenticatedRoute from './components/AuthenticatedRoute'
@@ -22,12 +22,11 @@ const App = () => {
         <Auth.Provider value={{ isAuthenticated, setIsAuthenticated }}>
             <div>
                 <Routes>
-                    <IndexRoute element={ <Website /> } />
-                    <Route path='/home/:userId' element={ <Wrapper /> } />
-                    <Route path='/' element={ <Website /> } />
-                    <Route path='/info' element={ <Info /> } />
-                    <Route path='/*' element={ <Error /> } />
-                    <Route path='/password' element={ <NewPass /> } />
+                    <Route exact path='/home/:userId' element={ <Wrapper /> } />
+                    <Route exact path='/' element={ <Website /> } />
+                    <Route exact path='/info' element={ <Info /> } />
+                    <Route exact path='/*' element={ <Error /> } />
+                    <Route exact path='/password' element={ <NewPass /> } />
                 </Routes>
                 <AuthenticatedRoute />
             </div>
