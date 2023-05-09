@@ -77,7 +77,8 @@ const SendMail = () => {
 			} else {
 				console.log(res.data.messageSend)
                 alert(res.data.messageSend)
-                navigate('/info')
+				const userId = res.data.userId
+				navigate(`/info/${userId}`)
 			}
 		})
 		.catch((error) => {
