@@ -26,7 +26,7 @@ const App = () => {
                     <Route exact path='/' element={ <Website /> } />
                     <Route exact path='/info' element={ <Info /> } />
                     <Route exact path='/*' element={ <Error /> } />
-                    {isAuthenticated === false && <Route path='/password' element={ <NewPass /> } />}
+                    {isAuthenticated === false && <Route exact path='/password' element={ <NewPass /> } />}
                 </Routes>
                 <AuthenticatedRoute />
             </div>
