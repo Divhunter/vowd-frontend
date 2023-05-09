@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import Video from '../Video'
-import me from '../../assets/pictures/me.jpg'
-import me2 from '../../assets/pictures/me2.jpg'
+//import me from '../../assets/pictures/me.jpg'
+//import space from '../../assets/pictures/space.jpg'
+//import me2 from '../../assets/pictures/me2.jpg'
+import nature from '../../assets/pictures/nature.jpg'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -24,7 +26,7 @@ const Banner = () => {
 				<span className='banner__title-d'>D</span>
 				ev.
 			</h1>
-			<h2 className='banner__subtitle'>Simplement votre !</h2>
+			{/*<h2 className='banner__subtitle'>Simplement votre !</h2>
 			<p className='banner__text'>
 				Consultant en développement web
 				<br/> 
@@ -33,7 +35,7 @@ const Banner = () => {
 				<strong className='banner__text__end'>
 					Pour les entrepreneurs ambitieux
 				</strong>
-			</p>
+			</p>*/}
 			<Link  className='banner__button' to=''>
 				<FontAwesomeIcon 
 					className='banner__button__btn' 
@@ -45,8 +47,10 @@ const Banner = () => {
 					en 5 minutes
 				</p>
 			</Link>
-			<img className='banner__picture' src={me} alt='congratulation' />
-			<img className='banner__picture2' src={me2} alt='congratulation' />
+			{/*<img className='banner__picture' src={space} alt='space' />*/}
+			{/*<img className='banner__picture' src={me} alt='congratulation' />*/}
+			{/*<img className='banner__picture2' src={me2} alt='congratulation' />*/}
+			<img className='banner__picture' src={nature} alt='congratulation' />
 			<Video />
 		</section>
 	)
