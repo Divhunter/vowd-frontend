@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Auth from '../../contexts/Auth'
 import Website from '../../pages/Website'
+import NewPass from './pages/NewPass'
 
 const AuthenticatedRoute = ({ path, component }) => {
     
@@ -14,6 +15,7 @@ const AuthenticatedRoute = ({ path, component }) => {
     ) : (
         <Routes>
             <Route exact path='/' element={ <Website /> } />
+            <Route path='/password' element={ <NewPass /> } />  
         </Routes>
     )
 }
