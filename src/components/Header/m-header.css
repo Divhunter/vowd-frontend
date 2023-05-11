@@ -17,7 +17,7 @@
 }
 
 .navbar-open {
-	height: 135vw;
+	height: 125vw;
 	background-color:  rgba(50, 62, 70, 0.25);
 	transition: height .4s, background-color 1.5s;
 }
@@ -89,9 +89,9 @@
 .navbar__button-x {
 	position: absolute;
     float: right;
-    top: 19.6vw;
-	right: 8vw;
-	font-size: 8vw;
+    top: 20vw;
+	right: 8.7vw;
+	font-size: 6vw;
 	color: white;
 	transition: color .4s;
 	cursor: pointer;
@@ -107,8 +107,8 @@
 	position: absolute;
     float: right;
     top: 20.8vw;
-	right: 7.5vw;
-	font-size: 6.5vw;
+	right: 8.4vw;
+	font-size: 5vw;
 	color: white;
 	cursor: pointer;
 	z-index: 500;

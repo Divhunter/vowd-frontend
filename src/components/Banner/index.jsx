@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import Video from '../Video'
-//import me from '../../assets/pictures/me.jpg'
-import space from '../../assets/pictures/space.jpg'
-//import me2 from '../../assets/pictures/me2.jpg'
-//import nature from '../../assets/pictures/nature.jpg'
+import me from '../../assets/pictures/me.jpg'
+import me2 from '../../assets/pictures/me2.jpg'
+import walle from '../../assets/pictures/wall-e.jpg'
+import walle2 from '../../assets/pictures/wall-e2.jpg'
+import nature from '../../assets/pictures/nature.jpg'
+import nature2 from '../../assets/pictures/nature2.jpg'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -12,6 +15,48 @@ import './m-banner.css'
 import './d-banner.css'
 
 const Banner = () => {
+
+	const [currentState, setCurrentState] = useState(0)
+
+	useEffect(()=> {
+		const timer = setTimeout(() => {
+			if (currentState === 2) {
+				setCurrentState(0)
+			}
+			else {
+				setCurrentState(currentState +1)
+			}
+		}, 5000)
+		return () => clearTimeout(timer)
+	}, [currentState] )
+
+	const slideArray = [
+		{	
+			"img": `${me}`
+		},
+		{
+			"img": `${walle}`
+		},
+		{
+			"img": `${nature}`
+		}
+	]
+
+	const slide = slideArray[currentState].img
+
+	const slideArray2 = [
+		{	
+			"img": `${me2}`
+		},
+		{
+			"img": `${walle2}`
+		},
+		{
+			"img": `${nature2}`
+		}
+	]
+
+	const slide2 = slideArray2[currentState].img
 
 	return (
 		<section id='banner' className='banner'>
@@ -26,16 +71,6 @@ const Banner = () => {
 				<span className='banner__title-d'>D</span>
 				ev.
 			</h1>
-			{/*<h2 className='banner__subtitle'>Simplement votre !</h2>
-			<p className='banner__text'>
-				Consultant en développement web
-				<br/> 
-				& communication digitale
-				<br/>
-				<strong className='banner__text__end'>
-					Pour les entrepreneurs ambitieux
-				</strong>
-			</p>*/}
 			<Link  className='banner__button' to=''>
 				<FontAwesomeIcon 
 					className='banner__button__btn' 
@@ -47,10 +82,21 @@ const Banner = () => {
 					en 5 minutes
 				</p>
 			</Link>
-			<img className='banner__picture' src={space} alt='space' />
-			{/*<img className='banner__picture' src={me} alt='congratulation' />*/}
-			{/*<img className='banner__picture2' src={me2} alt='congratulation' />*/}
-			{/*<img className='banner__picture' src={nature} alt='congratulation' />*/}
+			<h2 className='banner__subtitle'>Simplement votre !</h2>
+			<div> 
+				{slideArray.map((items, index) => (
+					<div key={index}>
+						{<img className='banner__picture' src={slide} alt="slide" />}
+					</div>
+				))}
+			</div>
+			<div> 
+				{slideArray2.map((items, index) => (
+					<div key={index}>
+						{<img className='banner__picture2' src={slide2} alt="slide" />}
+					</div>
+				))}
+			</div>
 			<Video />
 		</section>
 	)

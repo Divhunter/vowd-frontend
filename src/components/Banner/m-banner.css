@@ -58,52 +58,10 @@
     100%{opacity: 1;}
 }
 
-.banner__subtitle {
-    position: relative;
-    top: -10vw;
-    margin-bottom: 8vw;
-    width: 100%;
-    font-family: 'Michroma', sans-serif;
-    font-size: 6.5vw;
-    font-weight: 500;
-    letter-spacing: .5vw;
-    color: rgb(162, 215, 253);
-    animation-duration: 2.3s;
-    animation-name: train;
-    z-index: 1000;
-}
-
-@keyframes train {
-    0%{margin-left: 100vw;}
-    80%{margin-left: 100vw;}
-    100%{margin-left: 0;}
-}
-
-.banner__text {
-    top: -15vw;
-    position: relative;
-    margin-bottom: 17vw;
-    width: 90vw;
-    font-size: 4.5vw;
-    font-weight: 400;
-    line-height: 7vw;
-    letter-spacing: .52vw;
-    animation-delay: 1s, forwards 1;
-    animation-duration: 8s;
-    animation-name: reveal2;
-    z-index: 1000;
-}
-
 @keyframes reveal2 {
     0%{opacity: 0;}
     35%{opacity: 0;}
     100%{opacity: 1;}
-}
-
-.banner__text__end {
-    font-size: 5vw;
-    font-weight: bold;
-    color:  white;
 }
 
 .banner__button {
@@ -113,7 +71,7 @@
     left: 17vw;
     bottom: 20vw;
     margin-top: 45vw;
-    margin-bottom: 30vw;
+    margin-bottom: 20vw;
     padding-left: 2vw;
     flex-wrap: nowrap;
     max-width: 53vw;
@@ -186,6 +144,21 @@
     z-index: 1;
 }
 
+.banner__subtitle {
+    position: relative;
+    top: -5vw;
+    margin-bottom: 0;
+    width: 100%;
+    font-family: 'Michroma', sans-serif;
+    font-size: 6.5vw;
+    font-weight: 500;
+    letter-spacing: .5vw;
+    color: rgb(162, 215, 253);
+    animation-duration: 2.3s;
+    animation-name: train;
+    z-index: 1000;
+}
+
 .banner__picture {
     position: absolute;
     top: 0;
@@ -232,37 +205,8 @@
         margin-right: 2px;
     }
     
-    .banner__subtitle {
-        top: -40px;
-        margin-bottom: 35px;
-        font-size: 29.5px;
-        letter-spacing: 1.5px;
-    }
-    
-    .banner__text {
-        top: -65px;
-        width: 100%;
-        margin-bottom: -5vw;
-        font-size: 18px;
-        line-height: 32px;
-        letter-spacing: 2px;
-    }
-    
-    .banner__text > span {
-        font-size: 20px;
-    }
-    
-    .banner__text > a {
-        font-size: 24px;
-    }
-    
-    .banner__text__end {
-        font-size: 18.9px;
-    }
-    
     .banner__button {
-        position: relative;
-        bottom: .5vw;
+        top: -39vw;
         left: 0;
         padding-left: 9px;
         width: 220px;
@@ -285,6 +229,13 @@
         letter-spacing: 1px;
     }
 
+    .banner__subtitle {
+        text-align: center;
+        top: -25vw;
+        font-size: 29.5px;
+        letter-spacing: 1.5px;
+    }
+    
     .banner__picture2 {
         position: absolute;
         display: block;
