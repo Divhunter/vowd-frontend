@@ -75,6 +75,8 @@ label span {
 }
 
 .project-submit {
+	left: 50%;
+	transform: translate(-50%, 0);
     top: 190%;
 	width: auto;
 }
