@@ -25,7 +25,9 @@ const Uploader = () => {
             icon={faDownload}  
             />
             <p className='container-downlaod__text'>
-                Téléchargez le CV complet ainsi que l'ensemble des recommandations dans leur contenu intégral avec coordonnées au format pdf.
+                <strong>
+                    Téléchargez le CV complet ainsi que l'ensemble des recommandations dans leur contenu intégral avec coordonnées au format pdf.
+                </strong>
             </p>
         </div>
 	)

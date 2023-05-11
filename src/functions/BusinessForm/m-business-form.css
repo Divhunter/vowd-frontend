@@ -5,7 +5,6 @@
 .business-form {
 	position: absolute;
     display: flex;
-    justify-content: center;
 	top: 65%;
 	width: 100%;
 	visibility: visible;
@@ -13,6 +12,8 @@
 
 .business-form__container {
     position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
     top: 62vw;
 	display: flex;
 	flex-direction: row;

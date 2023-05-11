@@ -161,32 +161,6 @@ textarea {
 }
 
 /*************************************************************************************************/
-.form-submit {
-	position: absolute;
-	height: auto;
-    padding: 5vw;
-	border: 0;
-	border-radius: 1.2vw;
-    font-family: Open, sans-serif;
- 	font-size: 6vw;
-    font-weight: 500;
-    letter-spacing: .1vw;
-	background-color: rgb(255, 145, 0);
-    box-shadow: rgba(255, 58, 58, 0.5) 0px 30px 60px -12px inset, 
-    rgba(255, 72, 0, 0.719) 0px 18px 36px -18px inset;
-	color: white;
-	cursor: pointer;
-	transition: background-color .5s;
-}
-
-.form-submit:hover {
-	transition: background-color .5s;
-	background-color: rgb(255, 166, 0);
-}
-
-.form-submit:active {
-	background-color: rgb(255, 208, 0);
-}
 
 .form__next,
 .form__previous,
@@ -240,16 +214,36 @@ textarea {
 
     .form__next,
     .form__previous,
-    .subscrit-form {
+    .subscrit-form,
+    .formModal,
+    .forgotPassword,
+    .backToWebSiteModal,
+    .formSubmit {
         margin-bottom: 12px;
         width: 500px;
         padding: 20px;
         border-radius: 6px;
         font-size: 28px;
         letter-spacing: .5px;
+    } 
+
+    .form {
+        top: 55%;
+    }
+    
+    .formMeanStyle input {
+        height: 60px;
+        border-radius: 6px;
+        width: 500px;
+        margin-bottom: 12px;
+        padding-left: 20px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 1px;
     }
 
     .arrow-down {
         width: 40px;
-    } 
+    }
 }
