@@ -99,7 +99,7 @@ return (
                     />
                 ))}
                 <button 
-                    className='formSubmit'
+                    className='formSubmit sendMail-submit'
                 >Envoyez
                 </button>
             </form>

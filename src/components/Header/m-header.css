@@ -11,7 +11,7 @@
 }
 
 .navbar-closed {
-	height: 39.2vw;
+	height: 35vw;
 	background-color: rgb(32, 53, 65);
 	transition: height .3s, background-color .8s;
 }
@@ -57,7 +57,7 @@
 }
 
 .navbar__user:hover {
-	color: white;
+	color: rgb(0, 225, 255);
 	transition: color .4s;
 }
 
@@ -190,14 +190,14 @@ menu {
 	}
 
 	.navbar__logo-vowd {
-		top: 25px;
+		top: 40px;
 		margin-left: 45px;
-		width: 60px;
+		width: 40px;
 	}
 
 	.navbar__title-vowd {
 		margin-left: 0;
-		top: 0;
+		top: 25px;
 		font-size: 18px;
 		letter-spacing: 2px;
 	}

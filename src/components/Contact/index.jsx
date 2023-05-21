@@ -36,7 +36,7 @@ const Contact = () => {
                     }
                 />
             ))}
-            <img className='contact__picture' src={contact} alt='man' />
+            <img id='contact__picture' className='contact__picture' src={contact} alt='man' />
             <ContactForm />
 		</section>
 	)

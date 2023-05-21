@@ -3,16 +3,31 @@ import { useState, useContext } from 'react'
 import { login } from '../../../servicesApi/AuthApi'
 import Auth from '../../../contexts/Auth'
 import { removeItem } from '../../../servicesApi/LocalStorage'
+import Loading from '../../../components/Loading'
 import axios from "axios"
 import FormInput from '../../../functions/FormInput'
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash, faSquareCheck, faSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Login = () => {
 
 	removeItem('token')
 
+	const [ loading, setLoading ] = useState(false)
+
+	const toogleLoading = () => {
+		if (!loading) {
+			setLoading(true)
+		} else {
+			setLoading(false)
+		}
+	}
+
+	const [ connection, setConnection ] = useState(false)
+
 	const [ visible, setVisibility ] = useState(false)
+
+	const [ visible2, setVisibility2 ] = useState(false)
 
 	const { setIsAuthenticated } = useContext(Auth)
 
@@ -46,6 +61,15 @@ const Login = () => {
 			placeholder: 'Mot de passe',
 			label: 'Password',
 			required: true
+		},
+		{
+			id: 'terms',
+			name: 'terms',
+			type: 'text',
+			placeholder: 'C.G.U.',
+			label: 'terms',
+			readOnly: true,
+			disabled: true,
 		}
 	]
 
@@ -93,7 +117,9 @@ const Login = () => {
 				alert(res.data.passwordLogError)
 			} else {
 				const userId = res.data.userId
-				navigate(`/home/${userId}`)
+				connection ?
+				navigate(`/home/${userId}`) :
+				alert('Veuillez valider les C.G.U')
 			}
 		})
 		.catch((error) => {
@@ -105,23 +131,42 @@ const Login = () => {
 
 return (
 		<>
-            <form action='' id='login' onSubmit={(e) => handleSubmit(e)}>
-                {inputs.map(input => (
-					<FormInput 
-                        key={input.id} 
-                        {...input}
-                        value={values[inputs.name]}
-                        onChange={(e) => onChange(e)}
-                    />
-                ))}
-				<span className='connexion-password-toogle-icon toogle-icon'>
-					<FontAwesomeIcon 
-						icon={ visible ? faEyeSlash : faEye } 
-						onClick={() => setVisibility( visibility => !visibility)}
-					/>
-				</span>
-				<button className='formSubmit'>Se connecter</button>
-            </form>
+            {loading ? 
+				( <Loading/> ): 
+				(<form 
+					action='' 
+					id='login' 
+					onSubmit={(e) => handleSubmit(e) && toogleLoading}>
+					{inputs.map(input => (
+						<FormInput 
+							key={input.id} 
+							{...input}
+							value={values[inputs.name]}
+							onChange={(e) => onChange(e)}
+						/>
+					))}
+					<span 
+						toogle='#password' 
+						className='connexion-password-toogle-icon toogle-icon eye'
+					>
+						<FontAwesomeIcon 
+							icon={ visible ? faEyeSlash : faEye } 
+							onClick={() => setVisibility( visibility => !visibility)}
+						/>
+					</span>
+					<span onClick={setConnection}
+						toogle='#terms' 
+						className='connexion-terms-toogle-icon toogle-icon square'
+					>
+						<FontAwesomeIcon 
+							icon={ visible2 ? faSquareCheck : faSquare } 
+							onClick={() => setVisibility2( visibility => !visibility)}
+						/>
+					</span>
+					<button className='formSubmit login-submit'>Se connecter</button>
+				</form>
+				)
+			}
 		</>
 	)
 }

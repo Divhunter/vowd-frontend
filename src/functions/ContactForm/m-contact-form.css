@@ -63,10 +63,6 @@ textarea:focus::placeholder {
     display: none;
 }
 
-.contact-submit {
-    width: 80vw;
-}
-
 /********************************************* media queries ************************************************/
 /************************** New rules if the screen is at more 649px ****************************************/
 
@@ -94,9 +90,5 @@ textarea:focus::placeholder {
     
     .form-group input {
         height: 60px;
-    }
-    
-    .contact-submit {
-        width: 500px;
     }
 }

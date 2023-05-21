@@ -15,6 +15,8 @@ const Register = () => {
 
 	const [ visible, setVisibility ] = useState(false)
 
+	const [ visible2, setVisibility2 ] = useState(false)
+
 	const { setIsAuthenticated } = useContext(Auth)
 
     const[values, setValues] = useState({
@@ -52,7 +54,7 @@ const Register = () => {
 		{
 			id: 'confirmPassword',
 			name: 'confirmPassword',
-			type: visible ? 'text' : 'password',
+			type: visible2 ? 'text' : 'password',
 			placeholder: 'Confirmation du passe',
 			label: 'ConfirmPassword',
 			required: true
@@ -122,19 +124,25 @@ return (
                         onChange={(e) => onChange(e)}
                     />
                 ))}
-				<span className='register-password-toogle-icon toogle-icon'>
+				<span 
+					toogle='#password' 
+					className='register-password-toogle-icon toogle-icon eye'
+				>
 					<FontAwesomeIcon 
 						icon={ visible ? faEyeSlash : faEye } 
 						onClick={() => setVisibility( visibility => !visibility)}
 					/>
 				</span>
-				<span className='register-conf-password-toogle-icon toogle-icon'>
+				<span 
+					toogle='#confirmPassword' 
+					className='register-conf-password-toogle-icon toogle-icon eye'
+				>
 					<FontAwesomeIcon 
-						icon={ visible ? faEyeSlash : faEye } 
-						onClick={() => setVisibility( visibility => !visibility)}
+						icon={ visible2 ? faEyeSlash : faEye } 
+						onClick={() => setVisibility2( visibility => !visibility)}
 					/>
 				</span>
-                <button className='formSubmit'>S'enregistrer</button>
+                <button className='formSubmit register-submit'>S'enregistrer</button>
             </form>
 		</>
 	)
