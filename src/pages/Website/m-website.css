@@ -1,93 +1,108 @@
 /**********************************************************************************************/
 /******************************************** website *****************************************/
 /**********************************************************************************************/
-
 .website {
     position: absolute;
     text-align: center;
     width: 100%;
     height: auto;
-    padding-bottom: 300vw;
-    padding-top: 5vw;
-    background-color: rgb(17, 29, 39);
+    padding-top: 0;
+    padding-bottom: 200px;
+    background-color: rgb(126, 157, 185);
     color: rgb(231, 244, 253);
     top: 0;
     z-index: 2000;
 }
 
-.website__logo-vowd {
-    position: relative;
-    margin-bottom: 2vw;
-	top: 4.5vw;
-    width: 12vw;
-	height: auto;
-}
-
 .website_text {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4.2vw;
-    font-weight: 400;
-    line-height: 5.8vw;
-    color: rgb(192, 192, 192);
-}
-
-.website_text_span {
-    font-size: 4.5vw;
-    font-family: 'Michroma', sans-serif;
-    letter-spacing: .5vw;
+    position: relative;
+    text-align: center;
+    top: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 100px;
     text-transform: uppercase;
+    font-family: 'Michroma', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 1.5px;
     color: rgb(231, 244, 253);
+    background: linear-gradient(to top, rgba(81, 131, 172, 0.5), 20%, rgba(80, 155, 218, 0.1));
+    z-index: 5;
 }
 
-#modal-Title-log,
-#modal-Title-reg,
-#modal-Title-send,
-#modal-Title-updatePassword {
-    font-weight: 300;
-    text-align: left;
-    margin-left: 10vw;
-    font-size: 6vw;
-    letter-spacing: .2vw;
+.website_text_play {
+    font-size: 30px;
+    color: rgb(1, 158, 179);
+    cursor: pointer;
+    transition: color .4s;
 }
 
-.toogle-icon {
+.website_text_play:hover {
+    color: rgb(0, 225, 255);
+    transition: color .4s;
+}
+
+.website_text_play:active {
+    color: rgb(1, 158, 179);
+}
+
+.legal {
     position: absolute;
-    right: 0;
-    margin-right: 13vw;
-    font-size: 5.5vw;
-    z-index: 1000;
-    color: rgb(190, 192, 196);
+    bottom: 15px;
+    line-height: 15px;
+    font-family: 'Open', sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: .5px;
+    color: white;
     cursor: pointer;
 }
 
-.connexion-password-toogle-icon,
-.register-conf-password-toogle-icon,
-.newPass-conf-password-toogle-icon {
-    margin-top: -10vw;
+.legal:hover {
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
-.register-password-toogle-icon,
-.newPass-password-toogle-icon {
-    margin-top: -27vw;
+.website_text_span2 {
+    right: 20px;
 }
 
-.website__button__btn {
-    position: relative;
-    margin-top: -2vw;
-    margin-bottom: 5vw;
-    text-align: center;
-    font-size: 9vw;
-    color: rgb(189, 223, 248);
-    transition: color .4s;
+.website_text_span3 {
+    right: 65px;
 }
 
-.website__button__btn:hover {
-    color: white;
-    transition: color .4s;
+.website_text_span2:active {
+    text-decoration: none;
 }
 
-.website__button__btn:active {
-    color: rgb(189, 223, 248);
+.vdo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: auto;
+    width: 100%;
+    height: 180px;
+    filter: grayscale(1);
+    overflow: hidden;
+}
+
+.formInput__picture {
+    position: absolute;
+    left: -120vw;
+    display: block;
+    top: 50px;
+    width: auto;
+    height: 380vw;
+    opacity: .8;
+    z-index: -1;
+}
+
+.formInput__picture2 {
+    display: none;
 }
 
 /********************************************* media queries ************************************************/
@@ -99,14 +114,53 @@
     /******************************************* website ******************************************/
     /**********************************************************************************************/
 
-    .website__logo-vowd {
-        margin-bottom: 20px;
-        top: 25px;
-        width: 90px;
+    .website {
+        padding-bottom: 15vw;
+        padding-top: 0;
+    }
+
+    .website_text {
+        top: 0;
+        margin-top: 0;
+        margin-bottom: 150px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        line-height: 60px;
+        font-size: 60px;
+    }
+
+    .website_text_play {
+        font-size: 40px;
+    }
+
+    .legal {
+        bottom: 20px;
+        font-size: 12px;
+    }
+
+    .website_text_span2 {
+        right: 25px;
     }
     
-    .website__button__btn {
-        margin-top: -2px;
-        font-size: 55px;
+    .website_text_span3 {
+        right: 90px;
+    }
+
+    .vdo {
+        height: 322px;
+    }
+
+    .formInput__picture {
+        display: none;
+    }
+
+    .formInput__picture2 {
+        position: absolute;
+        display: block;
+        top: 200px;
+        width: 100%;
+        height: auto;
+        opacity: .8;
+        z-index: -1;
     }
 }

@@ -1,10 +1,14 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 // styles
 import './m-contact-form.css'
 import './d-contact-form.css'
 
 const ContactForm = () => {
+    
+    const textareaValue = localStorage.getItem('projectOther')
+
+    const [textareaVal, setTextareaVal] = useState(textareaValue)
 
     const [isOpen1, setIsOpen1] = useState(true)
 
@@ -260,7 +264,7 @@ const ContactForm = () => {
                 </div>
                 <div 
                     onClick={isOpen1State} 
-                    className="form__next">
+                    className="formModal form__next">
                     Suivant
                 </div>
             </div>
@@ -330,7 +334,6 @@ const ContactForm = () => {
                         Méssage
                     </label>
                     <textarea
-                        onChange={valueStateMessage}
                         onFocus={onFocusStateMessage}
                         onBlur={onBlurStateMessage}  
                         id='message'
@@ -340,19 +343,21 @@ const ContactForm = () => {
                         aria-label='message'
                         rows="4" cols="50"
                         maxLength={500}
+                        value={textareaVal ? textareaValue : ''}
+                        onChange={(e) => setTextareaVal(e.target.value) && valueStateMessage}
                     > 
                     </textarea> 
                 </div>
-                <div 
-                    onClick={isOpen2State}
-                    className="form__next">
-                    Précédent
-                </div>
                 <button 
-                    className="form-submit contact-submit" 
+                    className="formSubmit contact-submit" 
                     type="submit">
                     Envoyer
                 </button>
+                <div 
+                    onClick={isOpen2State}
+                    className="formModal form__previous">
+                    Précédent
+                </div>
             </div>
         </form>
 	)

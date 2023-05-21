@@ -1,22 +1,17 @@
 import ReactPlayer from 'react-player'
-//import vdo from '../../assets/video/vdo.mp4'
-
-// styles
-import './m-video.css'
-import './t-video.css'
-import './d-video.css'
+import computerVDO from '../../assets/video/computerVDO.mp4'
 
 const Video = () => {
     
 	return (
 		<div className='vdo'>
 			<ReactPlayer 
-                //url={vdo}
-                controls
+                url={computerVDO}
                 playing
                 muted
+                loop='true'
                 margin='auto'
-                width='80vw'
+                width='100%'
                 height='auto'
             />
 		</div>

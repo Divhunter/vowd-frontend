@@ -1,17 +1,20 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import Register from './Register'
 import Login from './Login'
 import SendMail from './SendMail'
-import Video from '../../components/Video'
-import vowd from '../../assets/brands/logo-vowd.png'
+import people from '../../assets/pictures/people.jpg'
+import people2 from '../../assets/pictures/people2.jpg'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import Video from '../../components/Video'
 
 // styles
 import './m-website.css'
 
 const Website = () => {
+
+	localStorage.clear()
 
 	const [isLoginModal, setIsLoginModal] = useState(true)
 	const [isRegisterModal, setIsRegisterModal] = useState(false)
@@ -20,21 +23,25 @@ const Website = () => {
 	const handleModals = (e) => {
 		if (e.target.id === 'loginModal') {
 			setIsLoginModal(false)
+			setIsSendMailModal(false)
 			setIsRegisterModal(true)
 		} 
 		else if (e.target.id === 'registerModal') {
 			setIsLoginModal(true)
+			setIsSendMailModal(false)
 			setIsRegisterModal(false)
 		}
 	}
 
 	const handleSendModals = (e) => {
 		if (e.target.id === 'sendMailModal') {
-			setIsLoginModal(false)
 			setIsSendMailModal(true)
+			setIsLoginModal(false)
+			setIsRegisterModal(false)
 		} 
 		else if (e.target.id === 'backToWebSiteModal') {
 			setIsLoginModal(true)
+			setIsRegisterModal(false)
 			setIsSendMailModal(false)
 		}
 	}
@@ -42,30 +49,28 @@ const Website = () => {
 	return (
 		<>
 			<section className='website'>
-				<img className='website__logo-vowd' src={vowd} alt='logo-vowd' />
-				<p className='website_text'>
+				<div className='website_text'>
 					<span className='website_text_span'>
 						<strong>
 							vowd
 						</strong>
+						<br/>
+						<FontAwesomeIcon className='website_text_play'
+							icon={ faCirclePlay } 
+						/>
 					</span>
-					<br/> 
-					consultant en développement web
-					<br/>
-					& communication digitale
-					<br/>
-				</p>
-				<Link  className='website__button' to=''>
-					<FontAwesomeIcon 
-						className='website__button__btn' 
-						icon={faCirclePlay} 
-					/>
-				</Link>
-				<Video />
+					<span className='website_text_span2 legal'>
+						C.G.U.
+					</span>
+					<span className='website_text_span3 legal'>
+						R.G.P.D.
+					</span>
+				</div>
+				< Video />
+				<img className='formInput__picture' src={people} alt='people' />
+				<img className='formInput__picture2' src={people2} alt='people' />
 				{ isLoginModal &&
 					<div>
-						<br/>
-						<h1 id='modal-Title-log'>Se connecter :</h1>
 						<Login />
 						<div
 							id='sendMailModal' 
@@ -76,17 +81,27 @@ const Website = () => {
 						</div>
 						<div 
 							id='loginModal'
-							className='formModal'
+							className='formModal loginModal'
 							onClick={handleModals} 
 						>
 							S'enregistrer
 						</div>
 					</div> 
 				}
-				{ isSendMailModal &&
+				{ isRegisterModal && 
 					<div>
-						<br/>
-						<h1 id='modal-Title-send'>Saisissez vos informations :</h1>
+						<Register />
+						<div 
+							id='registerModal'
+							className='formModal registerModal'
+							onClick={handleModals}
+						>
+							Déjà inscrit ?
+						</div>
+					</div> 
+				}
+				{ isSendMailModal &&
+					<div className='container-forgot'>
 						<SendMail />
 						<div
 							id='backToWebSiteModal' 
@@ -96,20 +111,6 @@ const Website = () => {
 							Retour au formulaire de connexion
 						</div>
 					</div>
-				}
-				{ isRegisterModal && 
-					<div>
-						<br/>
-						<h1 id='modal-Title-reg'>S'enregister :</h1>
-						<Register />
-						<div 
-							id='registerModal'
-							className='formModal'
-							onClick={handleModals}
-						>
-							Déjà inscrit ?
-						</div>
-					</div> 
 				}
 			</section>
 		</>

@@ -82,7 +82,7 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     cursor: pointer;
     animation-delay: 2s, forwards 1;
-    animation-duration: 10s;
+    animation-duration: 2s;
     animation-name: reveal2;
     z-index: 100;
 }
@@ -146,7 +146,7 @@
 
 .banner__subtitle {
     position: relative;
-    top: -5vw;
+    top: -8vw;
     margin-bottom: 0;
     width: 100%;
     font-family: 'Michroma', sans-serif;
