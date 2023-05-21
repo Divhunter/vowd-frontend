@@ -1,48 +1,27 @@
-import { Link } from 'react-scroll'
 import { faCircleCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useState } from 'react'
 
 // styles
 import './m-business-form.css'
 import './d-business-form.css'
 
 const BusinessForm = () => {
-
-    const [inputValue, setInputValue] = useState('');
-
-    const [isVisibleForm, setIsVisibleForm ] = useState(true)
-
-    const [isVisibleDiv, setIsVisibleDiv ] = useState(false)
-
-    const workWeb = 'Web'
-
-    const handleVisibleForm = (e) => {
-        e.preventDefault() 
-
-        if (e.target.id === 'project-submit' && document.getElementById('work-option-c').checked === true) {
-			setIsVisibleForm(false)
-            setIsVisibleDiv(true)
-
-		} else if (document.getElementById('other-button')) {
-            setIsVisibleForm(true)
-            setIsVisibleDiv(false)
-
-            let projectOther = []
-            projectOther.push(inputValue)
-            localStorage.setItem('projectOther', projectOther)
-            alert('Veuillez compléter le formulaire de contact via l\'onglet "Contact France" pour finaliser votre demande')
-            window.location.reload(false)
-
-        } else if (document.getElementById('other-closed')) {
-            setIsVisibleForm(true)
-            setIsVisibleDiv(false)
+    
+    const openOther = () => {
+        if (
+            document.getElementById('work-option-c').checked === true) {
+            document.getElementById('business-form').style.visibility = 'hidden'
+            document.getElementById('contenair-project-other').style.visibility = 'visible'
+            document.getElementById('contenair-project-other__input').focus();
+        } else {
+            document.getElementById('business-form').style.visibility = 'visible'
+            document.getElementById('contenair-project-other').style.visibility = 'hidden'
         }
     }
 
     return (
         <>
-            {isVisibleForm && <form 
+            <form 
                 id='business-form'
                 className='business-form'>
                 <div className='business-form__container'>
@@ -52,7 +31,6 @@ const BusinessForm = () => {
                             name='work-option' 
                             className='work-option option' 
                             id='work-option-a'
-                            value={workWeb}
                         />
                         <label className='work-option--padding1'
                             htmlFor='work-option-a'>Web
@@ -180,52 +158,39 @@ const BusinessForm = () => {
                     </div>
                 </div>
                 <div
-                    onClick={(e) => handleVisibleForm(e)}
+                    onClick={()=>openOther()}
                     name='projet-submit'
-                    className='formSubmit project-submit' 
+                    className='form-submit project-submit' 
                     id='project-submit'
                 >
                     Parlons-en
                 </div>
-            </form>}
-            {isVisibleDiv && <div 
+            </form>
+            <div 
                 id='contenair-project-other'
                 className='contenair-project-other'>
                 <h2 className='contenair-project-other__title'>
                     <FontAwesomeIcon 
-                        onClick={handleVisibleForm}
-                        id='other-closed'
                         className='other-closed' 
                         icon={faXmark} 
 				    />
                     Définissez votre projet
                 </h2>
-                <form id='description'>
-                    <label className='description'>Description</label>
-                    <textarea 
-                        autoFocus
-                        type='text'
-                        className='contenair-project-other__input'
-                        id='contenair-project-other__input'
-                        maxLength={500}
-                        rows="4" cols="50"
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}> 
-                    </textarea> 
-                    <button
-                        id='contenair-project-other__button'
-                        className='contenair-project-other__button'>
-                        <Link to='contact__picture'>
-                            <FontAwesomeIcon
-                                onClick={handleVisibleForm}
-                                id='other-button' 
-                                className='other-button' 
-                                icon={faCircleCheck} 
-                            />
-                        </Link>
-                    </button>
-                </form>
-            </div>}
+                <textarea 
+                    type='text'
+                    className='contenair-project-other__input'
+                    id='contenair-project-other__input'
+                    maxLength={500}
+                    rows="4" cols="50">
+                </textarea> 
+                <button
+                    className='contenair-project-other__button'>
+                    <FontAwesomeIcon
+                        className='other-button' 
+                        icon={faCircleCheck} 
+				    />
+                </button>
+            </div>
         </>
 	)
 }

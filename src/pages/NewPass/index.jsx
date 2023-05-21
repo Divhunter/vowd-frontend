@@ -3,10 +3,11 @@ import { useState } from 'react'
 import { removeItem } from '../../servicesApi/LocalStorage'
 import axios from "axios"
 import FormInput from '../../functions/FormInput'
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import Video from '../../components/Video'
+import vowd from '../../assets/brands/logo-vowd.png'
+import { faCirclePlay, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import people from '../../assets/pictures/people.jpg'
-import people2 from '../../assets/pictures/people2.jpg'
 
 const NewPass = () => {
 
@@ -15,8 +16,6 @@ const NewPass = () => {
 	removeItem('token')
 
 	const [ visible, setVisibility ] = useState(false)
-
-	const [ visible2, setVisibility2 ] = useState(false)
 
     const[values, setValues] = useState({
 		userName:'',
@@ -53,7 +52,7 @@ const NewPass = () => {
 		{
 			id: 'confirmPassword',
 			name: 'confirmPassword',
-			type: visible2 ? 'text' : 'password',
+			type: visible ? 'text' : 'password',
 			placeholder: 'Confirmation du passe',
 			label: 'ConfirmPassword',
 			required: true
@@ -102,16 +101,29 @@ const NewPass = () => {
 	return (
 		<>
 			<section className='website'>
+				<img className='website__logo-vowd' src={vowd} alt='logo-vowd' />
 				<p className='website_text'>
 					<span className='website_text_span'>
 						<strong>
 							vowd
 						</strong>
 					</span>
+					<br/> 
+					consultant en développement web
+					<br/>
+					& communication digitale
+					<br/>
 				</p>
-				<img className='formInput__picture' src={people} alt='people' />
-				<img className='formInput__picture2' src={people2} alt='people' />
+				<Link  className='website__button' to=''>
+					<FontAwesomeIcon 
+						className='website__button__btn' 
+						icon={faCirclePlay} 
+					/>
+				</Link>
+				<Video />
                 <div>
+                    <br/>
+                    <h1 id='modal-Title-updatePassword'>Saisissez vos informations :</h1>
                     <form action='' id='updatePassword' onSubmit={(e) => handleSubmit(e)}>
                         {inputs.map(input => (
                             <FormInput 
@@ -121,23 +133,20 @@ const NewPass = () => {
                                 onChange={(e) => onChange(e)}
                             />
                         ))}
-						<span toogle='#password' className='newPass-password-toogle-icon toogle-icon eye'>
+						<span className='newPass-password-toogle-icon toogle-icon'>
 							<FontAwesomeIcon 
 								icon={ visible ? faEyeSlash : faEye } 
 								onClick={() => setVisibility( visibility => !visibility)}
 							/>
 						</span>
-						<span 
-							toogle='#confirmPassword' 
-							className='newPass-conf-password-toogle-icon toogle-icon eye'
-						>
+						<span className='newPass-conf-password-toogle-icon toogle-icon'>
 							<FontAwesomeIcon 
-								icon={ visible2 ? faEyeSlash : faEye } 
-								onClick={() => setVisibility2( visibility => !visibility)}
+								icon={ visible ? faEyeSlash : faEye } 
+								onClick={() => setVisibility( visibility => !visibility)}
 							/>
 						</span>
                         <button 
-                            className='formSubmit newPass-submit'
+                            className='formSubmit'
                         >Envoyez
                         </button>
                     </form>

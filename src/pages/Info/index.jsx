@@ -5,7 +5,7 @@ import './m-info.css'
 
 const Info = () => {
 
-	removeItem('token')
+    removeItem('token')
 
 return (
 		<>

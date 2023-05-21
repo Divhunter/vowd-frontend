@@ -13,7 +13,7 @@ const AuthenticatedRoute = ({ path, component }) => {
         </Routes>
     ) : (
         <Routes>
-            <Route exact path='/' element={ <Website /> } />
+            <Route exact path='/' element={ <Website /> } /> 
         </Routes>
     )
 }

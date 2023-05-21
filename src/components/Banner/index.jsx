@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Video from '../Video'
 import me from '../../assets/pictures/me.jpg'
 import me2 from '../../assets/pictures/me2.jpg'
 import walle from '../../assets/pictures/wall-e.jpg'
@@ -85,17 +86,18 @@ const Banner = () => {
 			<div> 
 				{slideArray.map((items, index) => (
 					<div key={index}>
-						{<img className='banner__picture' src={slide} alt='slide' />}
+						{<img className='banner__picture' src={slide} alt="slide" />}
 					</div>
 				))}
 			</div>
 			<div> 
 				{slideArray2.map((items, index) => (
 					<div key={index}>
-						{<img className='banner__picture2' src={slide2} alt='slide' />}
+						{<img className='banner__picture2' src={slide2} alt="slide" />}
 					</div>
 				))}
 			</div>
+			<Video />
 		</section>
 	)
 }
