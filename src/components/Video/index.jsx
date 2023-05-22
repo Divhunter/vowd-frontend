@@ -9,7 +9,7 @@ const Video = () => {
                 url={computerVDO}
                 playing
                 muted
-                loop='true'
+                loop={true}
                 margin='auto'
                 width='100%'
                 height='auto'

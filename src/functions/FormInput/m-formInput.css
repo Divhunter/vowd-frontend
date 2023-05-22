@@ -19,23 +19,14 @@
 .formInput input {
     top: 1vh;
     background-color: rgb(255, 255, 255);
-    opacity: .4;
-    transition: opacity .2s;
-}
-
-.formInput input:hover {
-    opacity: .6;
-    transition: bopacity .2s;
 }
 
 .formInput input:focus {
-    background: white;
     color: black;
-    opacity: 1;
 }
 
 .formInput .Input::placeholder {
-    color: rgb(24, 50, 75);
+    color: rgb(160, 160, 160);
     opacity: 1;
 }
 
@@ -44,15 +35,6 @@
     color: black;
     background-color: white;
     opacity: 1;
-}
-
-.formInput .Input:focus::placeholder {
-    color: rgb(160, 160, 160);
-    opacity: 1;
-}
-
-.formInput .Input:invalid[focused='true']::placeholder {
-    color: rgb(160, 160, 160);
 }
 
 .formInput .Input:invalid[focused='true'] {
@@ -77,12 +59,11 @@
 }
 
 .eye {
-    color: rgb(27, 58, 87);
-    opacity: .5;
+    color: rgb(180, 180, 180);
 }
 
 .eye:hover {
-    opacity: .8;
+    color: rgb(120, 120, 120);
 }
 
 .square {
@@ -94,14 +75,14 @@
 .newPass-conf-password-toogle-icon,
 .connexion-terms-toogle-icon  {
     margin-left: 34vw;
-    margin-top: -11vw;
+    margin-top: -10.5vw;
 }
 
 .connexion-password-toogle-icon,
 .register-password-toogle-icon,
 .newPass-password-toogle-icon {
     margin-left: 34vw;
-    margin-top: -28.1vw;
+    margin-top: -27.5vw;
 }
 
 /*.formInput input:invalid[focused='false'] ~ .formError {
