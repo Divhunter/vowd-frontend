@@ -93,22 +93,6 @@
     overflow: hidden;
 }
 
-.formInput__picture {
-    display: none;
-    position: absolute;
-    left: -120vw;
-    /*display: block;*/
-    top: 50px;
-    width: auto;
-    height: 380vw;
-    opacity: .8;
-    z-index: -1;
-}
-
-.formInput__picture2 {
-    display: none;
-}
-
 /********************************************* media queries ************************************************/
 /************************** New rules if the screen is at more 649px ****************************************/
 
@@ -153,20 +137,5 @@
 
     .vdo {
         height: 322px;
-    }
-
-    .formInput__picture {
-        display: none;
-    }
-
-    .formInput__picture2 {
-        display: none;
-        position: absolute;
-        /*display: block;*/
-        top: 200px;
-        width: 100%;
-        height: auto;
-        opacity: .8;
-        z-index: -1;
     }
 }

@@ -2,8 +2,6 @@ import { useState } from 'react'
 import Register from './Register'
 import Login from './Login'
 import SendMail from './SendMail'
-import people from '../../assets/pictures/people.jpg'
-import people2 from '../../assets/pictures/people2.jpg'
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -67,8 +65,6 @@ const Website = () => {
 					</span>
 				</div>
 				< Video />
-				<img className='formInput__picture' src={people} alt='people' />
-				<img className='formInput__picture2' src={people2} alt='people' />
 				{ isLoginModal &&
 					<div>
 						<Login />
