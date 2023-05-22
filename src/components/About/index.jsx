@@ -202,7 +202,7 @@ const About = () => {
                         En janvier 2022, nous avons donc avec mon dernier employeur envisagé la possibilité d’une rupture conventionnelle de mon contrat de travail, pour me permettre de mener à bien mon projet de reconversion professionnelle de développement de Web app.
                         <br/>
                         <br/>
-                        Valider le parcours de Développeur Web proposé par OpenClassrooms m’a permis d’optimiser et de valoriser mes savoir-faire.
+                        Valider la formation de Développeur Web proposé par OpenClassrooms m’a permis d’optimiser et de valoriser mes savoir-faire.
                         <br/>
                         <br/>
                         Désormais, je m’applique à associer mon pragmatisme à mes compétences numériques.
