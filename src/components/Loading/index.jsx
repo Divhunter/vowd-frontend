@@ -8,7 +8,7 @@ const Loading = () => (
         <ThreeDots
             height='65'
             width='65'
-            color='white' 
+            color='white'
         />
     </div>
 )

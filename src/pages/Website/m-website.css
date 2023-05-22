@@ -98,6 +98,14 @@
     overflow: hidden;
 }
 
+.headerModal {
+    margin-top: -20px;
+    margin-bottom: 18px;
+    color: rgb(122, 122, 122);
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
 /********************************************* media queries ************************************************/
 /************************** New rules if the screen is at more 649px ****************************************/
 
@@ -146,5 +154,12 @@
 
     .vdo {
         height: 322px;
+    }
+
+    .headerModal {
+        margin-top: -50px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        letter-spacing: 1.5px;
     }
 }
