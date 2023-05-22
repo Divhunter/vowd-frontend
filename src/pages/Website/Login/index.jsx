@@ -66,7 +66,7 @@ const Login = () => {
 			id: 'terms',
 			name: 'terms',
 			type: 'text',
-			placeholder: 'C.G.U.',
+			placeholder: 'Veuillez cocher les C.G.U.',
 			label: 'terms',
 			readOnly: true,
 			disabled: true,
