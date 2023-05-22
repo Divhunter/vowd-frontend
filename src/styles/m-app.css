@@ -135,7 +135,7 @@ textarea {
 .forgotPassword:hover,
 .backToWebSiteModal:hover {
     color: white;
-    background-color: rgba(46, 63, 73, 0.8);
+    background-color: rgb(31, 48, 58);
     transition: background-color .3s, color .3s;
 }
 

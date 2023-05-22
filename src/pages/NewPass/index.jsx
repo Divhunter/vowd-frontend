@@ -5,8 +5,6 @@ import axios from "axios"
 import FormInput from '../../functions/FormInput'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import people from '../../assets/pictures/people.jpg'
-import people2 from '../../assets/pictures/people2.jpg'
 
 const NewPass = () => {
 
@@ -109,8 +107,6 @@ const NewPass = () => {
 						</strong>
 					</span>
 				</p>
-				<img className='formInput__picture' src={people} alt='people' />
-				<img className='formInput__picture2' src={people2} alt='people' />
                 <div>
                     <form action='' id='updatePassword' onSubmit={(e) => handleSubmit(e)}>
                         {inputs.map(input => (
