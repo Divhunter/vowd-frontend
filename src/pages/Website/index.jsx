@@ -67,7 +67,7 @@ const Website = () => {
 				< Video />
 				{ isLoginModal &&
 					<div>
-						<h1 className='headerModal'>-CONNECTION-</h1>
+						<h1 className='headerModal'>- CONNECTION -</h1>
 						<Login />
 						<div
 							id='sendMailModal' 
@@ -87,7 +87,7 @@ const Website = () => {
 				}
 				{ isRegisterModal && 
 					<div>
-						<h1 className='headerModal'>-INSCRIPTION-</h1>
+						<h1 className='headerModal'>- INSCRIPTION -</h1>
 						<Register />
 						<div 
 							id='registerModal'
@@ -100,7 +100,7 @@ const Website = () => {
 				}
 				{ isSendMailModal &&
 					<div className='container-forgot'>
-						<h1 className='headerModal'>-REDIRECTION MDP-</h1>
+						<h1 className='headerModal'>- REDIRECTION MDP -</h1>
 						<SendMail />
 						<div
 							id='backToWebSiteModal' 

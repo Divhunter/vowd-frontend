@@ -93,9 +93,6 @@ const Register = () => {
 				} else if (res.data.passwordRegError) {
 					console.log(res.data.passwordRegError)
 					alert(res.data.passwordRegError)
-				} else if (res.data.userRegError) {
-					console.log(res.data.userRegError)
-					alert(res.data.userRegError)
 				} else {
 					console.log(res.data.message)
 					alert(res.data.message)

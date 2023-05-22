@@ -108,7 +108,7 @@ const NewPass = () => {
 					</span>
 				</p>
                 <div>
-				<h1 className='headerModal'>-NOUVEAU MDP-</h1>
+				<h1 className='headerModal'>- NOUVEAU MDP -</h1>
                     <form action='' id='updatePassword' onSubmit={(e) => handleSubmit(e)}>
                         {inputs.map(input => (
                             <FormInput 
