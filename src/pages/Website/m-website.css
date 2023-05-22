@@ -8,9 +8,7 @@
     height: auto;
     padding-top: 0;
     padding-bottom: 200px;
-    background-color: rgb(15, 27, 34);
-    /*background: linear-gradient(to top, rgb(71, 79, 85), 20%, rgb(15, 27, 34));
-    background-color: rgb(126, 157, 185);*/
+    background-color: rgb(34, 62, 78);
     color: rgb(231, 244, 253);
     top: 0;
     z-index: 2000;
