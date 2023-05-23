@@ -196,7 +196,7 @@ const About = () => {
                         C’est ainsi qu’un BEP VAM en poche, avec la détermination et la rigueur que je m’impose au travail, des postes de responsable commercial et de magasin m’ont été confiés pendant plus de 20 ans. 
                         <br/>
                         <br/>
-                        Parallèlement, mon attrait de longue date pour la programmation informatique et ses nouvelles technologies m’amène depuis 6 ans à développer mes propres applications Web en autodidacte. Coder est rapidement devenu une passion, et s’est révélé à moi comme une évidence pour la poursuite de ma carrière.
+                        Parallèlement, mon attrait de longue date pour la programmation informatique et ses nouvelles technologies m’amène depuis 7 ans à développer mes propres applications Web en autodidacte. Coder est rapidement devenu une passion, et s’est révélé à moi comme une évidence pour la poursuite de ma carrière.
                         <br/>
                         <br/>
                         En janvier 2022, nous avons donc avec mon dernier employeur envisagé la possibilité d’une rupture conventionnelle de mon contrat de travail, pour me permettre de mener à bien mon projet de reconversion professionnelle de développement de Web app.
