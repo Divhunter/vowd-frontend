@@ -100,7 +100,7 @@ return (
                 ))}
                 <button 
                     className='formSubmit sendMail-submit'
-                >Envoyez
+                >Envoyer
                 </button>
             </form>
 		</>
