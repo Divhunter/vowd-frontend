@@ -67,7 +67,7 @@ const Website = () => {
 				< Video />
 				{ isLoginModal &&
 					<div>
-						<h1 className='headerModal'>- CONNECTION -</h1>
+						<h1 className='headerModal'>- CONNEXION -</h1>
 						<Login />
 						<div
 							id='sendMailModal' 
