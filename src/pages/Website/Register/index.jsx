@@ -84,23 +84,19 @@ const Register = () => {
 				}
 			})
 			.then((res) => {
-				if (res.data.userRegError) {
-					console.log(res.data.userRegError)
-					alert(res.data.userRegError)
-				}
-				else if (res.data.userNameRegError) {
+				if (res.data.userNameRegError) {
 					console.log(res.data.userNameRegError)
 					alert(res.data.userNameRegError)
 				} 
-				else if (res.data.emailRegError) {
+				if (res.data.emailRegError) {
 					console.log(res.data.emailRegError)
 					alert(res.data.emailRegError)
 				} 
-				else if (res.data.passwordRegError) {
+				if (res.data.passwordRegError) {
 					console.log(res.data.passwordRegError)
 					alert(res.data.passwordRegError)
 				} 
-				else {
+				if (res.data.message) {
 					console.log(res.data.message)
 					alert(res.data.message)
 					const response = login(values)
