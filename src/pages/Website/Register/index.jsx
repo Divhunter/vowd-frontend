@@ -28,32 +28,32 @@ const Register = () => {
 
     const inputs = [
 		{
-			id: 'userName',
-			name: 'userName',
+			id: 'userNameReg',
+			name: 'userNameReg',
 			type: 'text',
 			placeholder: 'Pseudo',
 			label: 'UserName',
 			required: true
 		},
 		{
-			id: 'email',
-			name: 'email',
+			id: 'emailReg',
+			name: 'emailReg',
 			type: 'email',
 			placeholder: 'Email',
 			label: 'Email',
 			required: true
 		},
 		{
-			id: 'password',
-			name: 'password',
+			id: 'passwordReg',
+			name: 'passwordReg',
 			type: visible ? 'text' : 'password',
 			placeholder: 'Mot de passe',
 			label: 'Password',
 			required: true
 		},
 		{
-			id: 'confirmPassword',
-			name: 'confirmPassword',
+			id: 'RegConfirmPassword',
+			name: 'RegConfirmPassword',
 			type: visible2 ? 'text' : 'password',
 			placeholder: 'Confirmation du passe',
 			label: 'ConfirmPassword',
