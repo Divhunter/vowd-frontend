@@ -88,22 +88,21 @@ const Register = () => {
 					console.log(res.data.userNameRegError)
 					alert(res.data.userNameRegError)
 				} 
-				if (res.data.emailRegError) {
+				else if (res.data.emailRegError) {
 					console.log(res.data.emailRegError)
 					alert(res.data.emailRegError)
 				} 
-				if (res.data.passwordRegError) {
+				else if (res.data.passwordRegError) {
 					console.log(res.data.passwordRegError)
 					alert(res.data.passwordRegError)
 				} 
-				if (res.data.message) {
+				else {
 					console.log(res.data.message)
 					alert(res.data.message)
 					const response = login(values)
             		setIsAuthenticated(response)
 					const userId = res.data.userId
 					navigate(`/home/${userId}`)
-					
 				}
 			})
 			.catch((userRegError) => {
