@@ -89,7 +89,7 @@ const Register = () => {
 					alert(res.data.userNameRegError)
 				} 
 				else if (res.data.errors) {
-					console.log(res.data.erros)
+					console.log(res.data.errors)
 					alert(res.data.errors)
 				} 
 				else {
