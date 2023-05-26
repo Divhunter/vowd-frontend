@@ -88,13 +88,9 @@ const Register = () => {
 					console.log(res.data.userNameRegError)
 					alert(res.data.userNameRegError)
 				} 
-				else if (res.data.emailRegError) {
-					console.log(res.data.emailRegError)
-					alert(res.data.emailRegError)
-				} 
-				else if (res.data.passwordRegError) {
-					console.log(res.data.passwordRegError)
-					alert(res.data.passwordRegError)
+				else if (res.data.errors) {
+					console.log(res.data.erros)
+					alert(res.data.errors)
 				} 
 				else {
 					console.log(res.data.message)
