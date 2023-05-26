@@ -84,7 +84,11 @@ const Register = () => {
 				}
 			})
 			.then((res) => {
-				if (res.data.userNameRegError) {
+				if (res.data.userRegError) {
+					console.log(res.data.userRegError)
+					alert(res.data.userRegError)
+				} 
+				else if (res.data.userNameRegError) {
 					console.log(res.data.userNameRegError)
 					alert(res.data.userNameRegError)
 				} 
@@ -105,9 +109,9 @@ const Register = () => {
 					navigate(`/home/${userId}`)
 				}
 			})
-			.catch((userRegError) => {
-				console.log(userRegError)
-				alert(userRegError)
+			.catch((error) => {
+				console.log(error)
+				alert(error)
 			})
 		}
 	}
