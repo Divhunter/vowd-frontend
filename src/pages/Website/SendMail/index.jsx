@@ -75,8 +75,8 @@ const SendMail = () => {
 				console.log(res.data.userSendError)
 				alert(res.data.userSendError)
 			} else {
-				console.log(res.data.messageSend)
-                alert(res.data.messageSend)
+				console.log(res.data.message)
+                alert(res.data.message)
                 navigate('/info')
 			}
 		})
