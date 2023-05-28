@@ -19,14 +19,6 @@ const SendMail = () => {
 
     const inputs = [
 		{
-			id: 'userName',
-			name: 'userName',
-			type: 'text',
-			placeholder: 'Pseudo',
-			label: 'UserName',
-			required: true
-		},
-		{
 			id: 'email',
 			name: 'email',
 			type: 'text',
@@ -66,8 +58,7 @@ const SendMail = () => {
 			url: 'https://vowd-project-app-api.onrender.com/api/auth/sendMail',
 			credentials: true,
 			data: {
-				userName: values.userName,
-				email: values.email,
+				email: values.email
 			}
 		})
 		.then((res) => {
