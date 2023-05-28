@@ -4,7 +4,7 @@ import { removeItem } from '../../servicesApi/LocalStorage'
 import './m-info.css'
 
 const Info = () => {
-
+    window.scrollTo(0,0)
 	removeItem('token')
 
 return (
