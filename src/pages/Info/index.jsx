@@ -1,11 +1,11 @@
-import { removeItem } from '../../servicesApi/LocalStorage'
+//import { removeItem } from '../../servicesApi/LocalStorage'
 
 // styles
 import './m-info.css'
 
 const Info = () => {
     window.scrollTo(0,0)
-	removeItem('token')
+	// removeItem('token')
 
 return (
 		<>
