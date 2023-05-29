@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useState, useContext } from 'react'
 import { login } from '../../../servicesApi/AuthApi'
 import Auth from '../../../contexts/Auth'
-import { removeItem } from '../../../servicesApi/LocalStorage'
+//import { removeItem } from '../../../servicesApi/LocalStorage'
 import Loading from '../../../components/Loading'
 import axios from "axios"
 import FormInput from '../../../functions/FormInput'
@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Login = () => {
 
-	removeItem('token')
+	//removeItem('token')
 
 	const [ loading, setLoading ] = useState(false)
 
