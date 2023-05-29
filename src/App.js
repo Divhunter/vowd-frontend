@@ -6,7 +6,6 @@ import AuthenticatedRoute from './components/AuthenticatedRoute'
 import Website from './pages/Website'
 import Wrapper from './pages/Wrapper'
 import Info from './pages/Info'
-import NewPass from './pages/NewPass'
 import Error from './pages/Error'
 import ScrollToTop from './functions/ScrollToTop'
 
@@ -26,7 +25,6 @@ const App = () => {
                     <Route path='/' element={ <Website /> } />
                     <Route path='/info' element={ <Info /> } />
                     <Route path='/*' element={ <Error /> } />
-                    <Route path='/password' element={ <NewPass /> } />
                 </Routes>
                 <AuthenticatedRoute />
             </div>
