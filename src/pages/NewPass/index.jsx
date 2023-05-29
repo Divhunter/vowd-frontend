@@ -3,8 +3,11 @@ import { useState } from 'react'
 import { removeItem } from '../../servicesApi/LocalStorage'
 import axios from "axios"
 import FormInput from '../../functions/FormInput'
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash, faCirclePlay } from '@fortawesome/free-solid-svg-icons'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import Video from '../../components/Video'
 
 const NewPass = () => {
 
@@ -100,15 +103,26 @@ const NewPass = () => {
 	return (
 		<>
 			<section className='website'>
-				<p className='website_text'>
+				<div className='website_text'>
 					<span className='website_text_span'>
 						<strong>
 							vowd
 						</strong>
+						<br/>
+						<FontAwesomeIcon className='website_text_play'
+							icon={ faCirclePlay } 
+						/>
 					</span>
-				</p>
+					<span className='website_text_span2 legal'>
+						C.G.U.
+					</span>
+					<span className='website_text_span3 legal'>
+						R.G.P.D.
+					</span>
+				</div>
+				< Video />
                 <div>
-				<h1 className='headerModal'>- NOUVEAU MDP -</h1>
+					<h1 className='headerModal'>- NOUVEAU MDP -</h1>
                     <form action='' id='updatePassword' onSubmit={(e) => handleSubmit(e)}>
                         {inputs.map(input => (
                             <FormInput 
