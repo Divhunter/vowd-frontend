@@ -12,7 +12,7 @@ import './m-website.css'
 
 const Website = () => {
 
-	//localStorage.clear()
+	localStorage.clear()
 
 	const [isLoginModal, setIsLoginModal] = useState(true)
 	const [isRegisterModal, setIsRegisterModal] = useState(false)

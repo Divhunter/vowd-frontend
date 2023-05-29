@@ -2,13 +2,13 @@ import { useNavigate } from "react-router-dom"
 import { useState, useContext } from 'react'
 import { login } from '../../../servicesApi/AuthApi'
 import Auth from '../../../contexts/Auth'
-//import { removeItem } from '../../../servicesApi/LocalStorage'
+import { removeItem } from '../../../servicesApi/LocalStorage'
 import axios from "axios"
 import FormInput from '../../../functions/FormInput'
 
 const SendMail = () => {
 
-	//removeItem('token')
+	removeItem('token')
 
 	const { setIsAuthenticated } = useContext(Auth)
 
@@ -42,7 +42,7 @@ const SendMail = () => {
 
 	const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 		
         try {
