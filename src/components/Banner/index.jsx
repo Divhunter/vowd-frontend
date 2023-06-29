@@ -43,15 +43,6 @@ const Banner = () => {
 
 	const slide = slideArray[currentState].img
 
-	if (currentState === 2) {
-		slideArray[currentState].img.style.opacity = '0'
-		slideArray[currentState].img.style.transition = 'opacity 2s'
-	} 
-	else {
-		slideArray[currentState].img.style.opacity = '1'
-		slideArray[currentState].img.style.transition = 'opacity 2s'
-	}
-
 	const slideArray2 = [
 		{	
 			"img": `${me2}`
