@@ -176,12 +176,12 @@
 
 .banner__picture--in {
     opacity: 1;
-    transition: 'opacity' 2s;
+    transition: 2s;
 }
 
 .banner__picture--out {
     opacity: 0;
-    transition: 'opacity' 2s;
+    transition: 2s;
 }
 
 /********************************************* media queries ************************************************/
