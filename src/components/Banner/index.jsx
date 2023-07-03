@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+//import { useState, useEffect } from 'react'
 import { Fade } from 'react-slideshow-image'
 import me from '../../assets/pictures/me.jpg'
 import me2 from '../../assets/pictures/me2.jpg'
@@ -16,7 +16,7 @@ import './d-banner.css'
 
 const Banner = () => {
 
-	const [currentState, setCurrentState] = useState(0)
+	/*const [currentState, setCurrentState] = useState(0)
 
 	useEffect(()=> {
 		const timer = setTimeout(() => {
@@ -28,7 +28,7 @@ const Banner = () => {
 			}
 		}, 5000)
 		return () => clearTimeout(timer)
-	}, [currentState] )
+	}, [currentState] )*/
 
 	const slideArray = [
 		{	
@@ -42,7 +42,7 @@ const Banner = () => {
 		}
 	]
 
-	const slide = slideArray[currentState].img
+	const slide = slideArray.img
 
 	const slideArray2 = [
 		{	
@@ -56,7 +56,7 @@ const Banner = () => {
 		}
 	]
 
-	const slide2 = slideArray2[currentState].img
+	const slide2 = slideArray2.img
 
 	return (
 		<section id='banner' className='banner'>
