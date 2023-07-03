@@ -167,7 +167,6 @@
     width: 100%;
     height: auto;
     margin-bottom: -2vw;
-    opacity: .7;
 }
 
 .banner__picture2 {
@@ -175,7 +174,7 @@
 }
 
 .banner__picture--in {
-    opacity: 1;
+    opacity: -7;
     transition: 5s;
 }
 

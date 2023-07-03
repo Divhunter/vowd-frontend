@@ -41,8 +41,6 @@ const Banner = () => {
 		}
 	]
 
-	const slide = slideArray[currentState].img
-
 	const slideArray2 = [
 		{	
 			"img": `${me2}`
@@ -54,8 +52,6 @@ const Banner = () => {
 			"img": `${nature2}`
 		}
 	]
-
-	const slide2 = slideArray2[currentState].img
 
 	return (
 		<section id='banner' className='banner'>
@@ -86,7 +82,7 @@ const Banner = () => {
 				{slideArray.map((items, index) => (
 					<div key={index}>
 						<img className={index === currentState ? 'banner__picture banner__picture--in' : 'banner__picture banner__picture--out'}
-						src={slide} 
+						src={items.slide} 
 						alt='slide' />
 					</div>
 				))}
@@ -95,7 +91,7 @@ const Banner = () => {
 				{slideArray2.map((items, index) => (
 					<div key={index}>
 						<img className={index === currentState ? 'banner__picture2 banner__picture--in' : 'banner__picture2 banner__picture--out'}
-						src={slide2} 
+						src={items.slide} 
 						alt='slide' />
 					</div>
 				))}
