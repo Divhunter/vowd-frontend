@@ -84,9 +84,11 @@ const Banner = () => {
 			<h2 className='banner__subtitle'>Simplement votre !</h2>
 			<div> 
 				{slideArray.map((items, index) => (
-					<div key={index}>
-						{<img className=
-						{ index === currentState ? 'banner__picture banner__picture--in' : 'banner__picture banner__picture--out'} 
+					<div 
+						key={index}
+						className={index === currentState ? 'banner__picture--in' : 'banner__picture--out'} 
+					>
+						{<img className='banner__picture'
 						src={slide} 
 						alt='slide' />}
 					</div>
@@ -94,9 +96,11 @@ const Banner = () => {
 			</div>
 			<div> 
 				{slideArray2.map((items, index) => (
-					<div key={index}>
-						{<img className=
-						{ index === currentState ? 'banner__picture2 banner__picture--in' : 'banner__picture2 banner__picture--out'}
+					<div 
+						key={index}
+						className={index === currentState ? 'banner__picture--in' : 'banner__picture--out'} 
+					>
+						{<img className='banner__picture2'
 						src={slide2} 
 						alt='slide' />}
 					</div>
