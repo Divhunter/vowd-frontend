@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { Fade } from 'react-slideshow-image'
 import me from '../../assets/pictures/me.jpg'
 import me2 from '../../assets/pictures/me2.jpg'
 import walle from '../../assets/pictures/wall-e.jpg'
@@ -82,26 +83,20 @@ const Banner = () => {
 				</p>
 			</Link>
 			<h2 className='banner__subtitle'>Simplement votre !</h2>
-			<div> 
+			<Fade>
 				{slideArray.map((items, index) => (
 					<div key={index}>
-						{<img className=
-						{ currentState ? 'banner__picture banner__picture--in' : 'banner__picture banner__picture--out'} 
-						src={slide} 
-						alt='slide' />}
+						<img className='banner__picture' src={slide} alt='slide' />
 					</div>
 				))}
-			</div>
-			<div> 
+			</Fade>
+			<Fade> 
 				{slideArray2.map((items, index) => (
 					<div key={index}>
-						{<img className=
-						{ currentState ? 'banner__picture2 banner__picture--in' : 'banner__picture2 banner__picture--out'}
-						src={slide2} 
-						alt='slide' />}
+						<img className='banner__picture2 banner__picture--in'src={slide2} alt='slide' />
 					</div>
 				))}
-			</div>
+			</Fade>
 		</section>
 	)
 }
