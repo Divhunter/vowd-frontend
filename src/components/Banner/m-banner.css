@@ -175,12 +175,12 @@
 
 .banner__picture--in {
     opacity: -7;
-    transition-duration: 2s;
+    transition: 'opacity' 2s;
 }
 
 .banner__picture--out {
     opacity: 0;
-    transition-duration: 2s ease;
+    transition: 'opacity' 2s ease;
     transform: scale(1.08);
 }
 
