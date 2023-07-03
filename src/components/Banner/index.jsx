@@ -41,8 +41,6 @@ const Banner = () => {
 		}
 	]
 
-	const slide = slideArray[currentState].img
-
 	const slideArray2 = [
 		{	
 			"img": `${me2}`
@@ -54,8 +52,6 @@ const Banner = () => {
 			"img": `${nature2}`
 		}
 	]
-
-	const slide2 = slideArray2[currentState].img
 
 	return (
 		<section id='banner' className='banner'>
@@ -89,7 +85,7 @@ const Banner = () => {
 						className={index === currentState ? 'banner__picture--in' : 'banner__picture--out'} 
 					>
 						{<img className='banner__picture'
-						src={slide} 
+						src={items.img} 
 						alt='slide' />}
 					</div>
 				))}
@@ -101,7 +97,7 @@ const Banner = () => {
 						className={index === currentState ? 'banner__picture--in' : 'banner__picture--out'} 
 					>
 						{<img className='banner__picture2'
-						src={slide2} 
+						src={items.img} 
 						alt='slide' />}
 					</div>
 				))}
