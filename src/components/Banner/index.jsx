@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { Fade } from 'react-slideshow-image'
 import me from '../../assets/pictures/me.jpg'
 import me2 from '../../assets/pictures/me2.jpg'
 import walle from '../../assets/pictures/wall-e.jpg'
@@ -42,6 +41,8 @@ const Banner = () => {
 		}
 	]
 
+	const slide = slideArray[currentState].img
+
 	const slideArray2 = [
 		{	
 			"img": `${me2}`
@@ -53,6 +54,8 @@ const Banner = () => {
 			"img": `${nature2}`
 		}
 	]
+
+	const slide2 = slideArray2[currentState].img
 
 	return (
 		<section id='banner' className='banner'>
@@ -79,20 +82,26 @@ const Banner = () => {
 				</p>
 			</Link>
 			<h2 className='banner__subtitle'>Simplement votre !</h2>
-			<Fade>
+			<div> 
 				{slideArray.map((items, index) => (
 					<div key={index}>
-						{currentState && <img className='banner__picture' src={items.img} alt='slide' />}
+						{<img className=
+						{ index === currentState ? 'banner__picture banner__picture--in' : 'banner__picture banner__picture--out'} 
+						src={slide} 
+						alt='slide' />}
 					</div>
 				))}
-			</Fade>
-			<Fade> 
+			</div>
+			<div> 
 				{slideArray2.map((items, index) => (
 					<div key={index}>
-						{currentState && <img className='banner__picture2 banner__picture--in'src={items.img} alt='slide' />}
+						{<img className=
+						{ index === currentState ? 'banner__picture2 banner__picture--in' : 'banner__picture2 banner__picture--out'}
+						src={slide2} 
+						alt='slide' />}
 					</div>
 				))}
-			</Fade>
+			</div>
 		</section>
 	)
 }
