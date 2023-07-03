@@ -174,14 +174,14 @@
 }
 
 .banner__picture--in {
-    opacity: -7;
+    opacity: 7;
     transition: 2s;
 }
 
 .banner__picture--out {
     opacity: 0;
-    transition: 2s ease;
     transform: scale(1.08);
+    transition: all 2s ease;
 }
 
 /********************************************* media queries ************************************************/
