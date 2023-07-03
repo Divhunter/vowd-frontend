@@ -79,26 +79,20 @@ const Banner = () => {
 			</Link>
 			<h2 className='banner__subtitle'>Simplement votre !</h2>
 			<div> 
-				{slideArray.map((items, index) => (
-					<div 
-						key={index}
-						className={index === currentState ? 'banner__picture--in' : 'banner__picture--out'} 
-					>
-						{<img className='banner__picture'
+				{slideArray[currentState].map((items, index) => (
+					<div key={index}>
+						<img className={index === currentState ? 'banner__picture banner__picture--in' : 'banner__picture banner__picture--out'}
 						src={items.img} 
-						alt='slide' />}
+						alt='slide' />
 					</div>
 				))}
 			</div>
 			<div> 
-				{slideArray2.map((items, index) => (
-					<div 
-						key={index}
-						className={index === currentState ? 'banner__picture--in' : 'banner__picture--out'} 
-					>
-						{<img className='banner__picture2'
+				{slideArray2[currentState].map((items, index) => (
+					<div key={index}>
+						<img className={index === currentState ? 'banner__picture2 banner__picture--in' : 'banner__picture2 banner__picture--out'}
 						src={items.img} 
-						alt='slide' />}
+						alt='slide' />
 					</div>
 				))}
 			</div>
