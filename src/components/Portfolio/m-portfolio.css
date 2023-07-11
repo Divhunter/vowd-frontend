@@ -59,13 +59,13 @@
     opacity: .5;
     border-radius: 3vw;
     filter: brightness(60%);
-    transition: opacity .2s ease-in-out;
+    transition: opacity .4s ease-in-out;
 }
 
 .portfolio__book__link:hover .portfolio__book__link__article__cover {
     opacity: 1;
     border-radius: 3vw;
-    transition: opacity .2s ease-in-out;
+    transition: opacity .4s ease-in-out;
 }
 
 .portfolio__book__link__article > div {
