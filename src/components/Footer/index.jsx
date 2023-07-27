@@ -96,7 +96,7 @@ const Footer = () => {
             </div>
             <div className='footer__copyright'>
                 <p>
-                    © 2023 - design & réalisation web par Aaron DIVIOKA
+                    © 2023 - conception web par Aaron DIVIOKA
                 </p>
             </div>	
 		</footer>

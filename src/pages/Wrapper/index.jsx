@@ -16,7 +16,11 @@ import Footer from '../../components/Footer'
 import './m-wrapper.css'
 
 const Wrapper = (props) => {
-	window.scrollTo(0,0)
+
+	window.onload = () => {
+        window.scrollTo(0,0)
+    }
+	
 	const navigate = useNavigate()
 	const {isAuthenticated} = useContext(Auth)
 
