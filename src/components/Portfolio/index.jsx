@@ -46,8 +46,8 @@ const Portfolio = () => {
                     <h2 className='portfolio__book__link__title'>Auto-école<br/>Turbo</h2>
                     <article className='portfolio__book__link__article'>
                         <div className='portfolio__book__link__article__info'>
-                            <h3>PHP JS</h3>
-                            <p>autoecole-turbo.com</p>
+                            <h3>autoecole-turbo.com</h3>
+                            <p>html css php js bootstrap</p>
                         </div>
                         <img className='portfolio__book__link__article__cover'src={turbo} alt='auto-ecole-turbo'/>
                     </article>
