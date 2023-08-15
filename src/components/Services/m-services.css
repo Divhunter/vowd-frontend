@@ -88,7 +88,7 @@
 
 .block-paragraph__text {
     line-height: 3vw;
-    font-family: 'Open' sans-serif;
+    font-family: 'Open', sans-serif;
     font-size: 4.5vw;
     font-weight: 500;
     line-height: 6vw;

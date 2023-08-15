@@ -108,6 +108,7 @@
 
 .portfolio__book__link__article__info > h3 {
     position: absolute;
+    width: 100%;
     margin-left: 5vw;
     top: 5vw;
     font-size: 6vw;

@@ -81,7 +81,6 @@
     background: linear-gradient(rgb(51, 108, 182), rgb(70, 130, 209));
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     cursor: pointer;
-    animation-delay: 2s, forwards 1;
     animation-duration: 2s;
     animation-name: reveal2;
     z-index: 100;

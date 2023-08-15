@@ -3,7 +3,6 @@ import { useState } from "react"
 // styles
 import './m-cv-scrolling.css'
 import './t-cv-scrolling.css'
-import './d-cv-scrolling.css'
 
 const CvScrolling = (props) => {
 

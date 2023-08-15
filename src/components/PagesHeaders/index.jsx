@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // styles
 import './m-pages-headers.css'
-import './t-pages-headers.css'
-import './d-pages-headers.css'
 
 const PagesHeaders = (props) => { 
 

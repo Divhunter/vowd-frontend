@@ -2,6 +2,7 @@ import pagesHeadersArray from '../../datas/pagesHeadersArray.json'
 import PagesHeaders from '../../components/PagesHeaders'
 import elTaros from '../../assets/pictures/el-taros.jpg'
 import turbo from '../../assets/pictures/auto-ecole-turbo.jpg'
+import leon from '../../assets/pictures/leon-logo.jpg'
 import { faGears } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -17,6 +18,11 @@ const Portfolio = () => {
 
     const redirection = () => { 
         window.location.replace('http://autoecole-turbo.com/')
+        return null
+    }
+
+    const redirection2 = () => { 
+        window.location.replace('https://divhunter.github.io/leon/')
         return null
     }
 
@@ -46,20 +52,20 @@ const Portfolio = () => {
                     <h2 className='portfolio__book__link__title'>Auto-école<br/>Turbo</h2>
                     <article className='portfolio__book__link__article'>
                         <div className='portfolio__book__link__article__info'>
-                            <h3>autoecole-turbo.com</h3>
+                            <h3>Site d'auto-école</h3>
                             <p>html css php js bootstrap</p>
                         </div>
                         <img className='portfolio__book__link__article__cover'src={turbo} alt='auto-ecole-turbo'/>
                     </article>
                 </div>
-                <div className='portfolio__book__link'>
-                    <h2 className='portfolio__book__link__title'>El<br/>Taros</h2>
+                <div className='portfolio__book__link' onClick={redirection2}>
+                    <h2 className='portfolio__book__link__title'>Léon<br/>Showman</h2>
                     <article className='portfolio__book__link__article'>
                         <div className='portfolio__book__link__article__info'>
-                            <h3>Site restaurateur</h3>
+                            <h3>Site artistique</h3>
                             <p>En cours de réalisation</p>
                         </div>
-                        <img className='portfolio__book__link__article__cover'src={elTaros} alt='resto'/>
+                        <img className='portfolio__book__link__article__cover'src={leon} alt='artiste-leon-showman'/>
                     </article>
                 </div>
                 <div className='portfolio__book__link'>
